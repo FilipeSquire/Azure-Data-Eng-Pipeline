@@ -3,16 +3,16 @@
 {{
     config(
         file_format = "delta",
-        location_root = "mnt/silver/productcategory",
+        location_root = "/mnt/silver/productcategory/",
         target_schema = 'snapshot',
         invalidate_hard_deletes=True,
-        unique_key='ProductID',
+        unique_key='ProductCategoryID',
         strategy='check',
         check_cols='all'
     )
 }}
 
-from productcategory_snapshot as (
+with productcategory_snapshot as (
     SELECT 
         ProductCategoryID,
         ParentProductCategoryID,

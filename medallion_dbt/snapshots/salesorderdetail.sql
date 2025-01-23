@@ -3,7 +3,7 @@
 {{
     config(
         file_format = "delta",
-        location_root = "mnt/silver/salesorderdetail",
+        location_root = "/mnt/silver/salesorderdetail/",
         target_schema = 'snapshot',
         invalidate_hard_deletes=True,
         unique_key='SalesOrderDetailID',

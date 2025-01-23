@@ -3,7 +3,7 @@
 {{
     config(
         file_format = "delta",
-        location_root = "mnt/silver/product",
+        location_root = "/mnt/silver/product/",
         target_schema = 'snapshot',
         invalidate_hard_deletes=True,
         unique_key='ProductID',
@@ -32,6 +32,6 @@ with product_snapshot as (
     from {{source('saleslt','product')}}
 )
 
-select * product_snapshot
+select * from product_snapshot
 
 {% endsnapshot %}

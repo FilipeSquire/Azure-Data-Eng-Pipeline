@@ -3,7 +3,7 @@
 {{
     config(
         file_format = "delta",
-        location_root = "mnt/silver/address",
+        location_root = "/mnt/silver/address/",
         target_schema = 'snapshot',
         invalidate_hard_deletes=True,
         unique_key='AddressID',
@@ -24,6 +24,6 @@ with address_snapshot as (
     from {{source('saleslt','address')}}
 )
 
-select * from address_snapshot;
+select * from address_snapshot
 
 {% endsnapshot %}

@@ -3,7 +3,7 @@
 {{
     config(
         file_format = "delta",
-        location_root = "mnt/silver/customeraddress",
+        location_root = "/mnt/silver/customeraddress/",
         target_schema = 'snapshot',
         invalidate_hard_deletes=True,
         unique_key="customerID||'-'||AddressID",
