@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: customers
+    columns:
+      - name: customer_sk
+        description: surrogate key of customer
+        tests:
+          - unique
+          - not_null
+      - name: customerid
+        description: natural key of customer
+        tests:
+          - not null
+      - name: fullname
+        description: customer name, adopted as customer_fullname when person name is not null
+      - name: AddressId
+        tests:
+          - not_null
+      - name: AddressType
+      - name: AddressLine1
+      - name: City
+      - name: StateProvince
+      - name: CountryRegion
+      - name: PostalCode
+      
