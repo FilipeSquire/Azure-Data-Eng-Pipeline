@@ -33,7 +33,7 @@ product_snapshot as (
         DiscontinuedDate,
         ThumbNailPhoto,
         ThumbnailPhotoFileName
-    FROM {{ source('saleslt', 'product') }}
+    FROM {{ref('product_snapshot') }}
 ),
 
 saleorderheader_snapshot as (
