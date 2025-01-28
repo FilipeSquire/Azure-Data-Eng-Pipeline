@@ -1,0 +1,9 @@
+{
+	"name": "medallion-adf-felipe",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5cd8f160-3281-4dab-9589-aadd2e543d14",
+		"tenantId": "e4bd69ff-e6f7-4c2e-b247-41b54ba2490e"
+	}
+}
